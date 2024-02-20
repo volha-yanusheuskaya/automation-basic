@@ -1,12 +1,12 @@
-package Planes;
+package com.aircompany.planes;
 
 import java.util.Objects;
 
-abstract public class Plane {
-    String model;
-    private int maxSpeed;
-    private int maxFlightDistance;
-    private int maxLoadCapacity;
+public class Plane {
+    private final String model;
+    private final int maxSpeed;
+    private final int maxFlightDistance;
+    private final int maxLoadCapacity;
 
     public Plane(String model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity) {
         this.model = model;
@@ -19,26 +19,25 @@ abstract public class Plane {
         return model;
     }
 
-    public int getMS() {
+    public int getMaxSpeed() {
         return maxSpeed;
     }
 
-    public int Get_Max_Flight_Distance() {
+    public int getMaxFlightDistance() {
         return maxFlightDistance;
     }
 
-    public int getMinLoadCapacity() {
-        int result = this.maxLoadCapacity;
-        return result;
+    public int getMaxLoadCapacity() {
+        return maxLoadCapacity;
     }
 
     @Override
     public String toString() {
-        return "Plane{" +
-                "model='" + model + '\'' +
-                ", maxSpeed=" + maxSpeed +
-                ", maxFlightDistance=" + maxFlightDistance +
-                ", maxLoadCapacity=" + maxLoadCapacity +
+        return "\n Plane {" +
+                "model='" + getModel() + '\'' +
+                ", maxSpeed=" + getMaxSpeed() +
+                ", maxFlightDistance=" + getMaxFlightDistance() +
+                ", maxLoadCapacity=" + getMaxLoadCapacity() +
                 '}';
     }
 
